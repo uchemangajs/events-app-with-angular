@@ -1,7 +1,7 @@
 <div class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" >ngEvents</a>
+        <a class="navbar-brand" >NG-Events</a>
       </div>
   
       <div  class="collapse navbar-collapse"  >
@@ -66,8 +66,8 @@
     </div>
   </simple-modal>
 
-  <div class="caret-div"><span class="caret" style="float: right;  margin-right: 3%;" *ngIf="this.isButtonVisible"></span></div>
-  <div class="drop-menu" #dropMenu *ngIf="this.isButtonVisible">
+  <div class="caret-div"><span class="caret" style="float: right;  margin-right: 3%;" *ngIf="this.isButtonVisible" (click)="toggleDiv()"></span></div>
+  <div class="drop-menu" #dropMenu *ngIf="this.isButtonVisible" (click)="toggleDiv()">
             
     <ul class="drop-list" style="list-style-type:none;">
         <li class=""><form id="searchForm" (ngSubmit)="searchSessions(searchTerm)" class="navbar-form "  >
