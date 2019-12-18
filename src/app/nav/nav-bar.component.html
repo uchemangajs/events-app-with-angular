@@ -66,8 +66,8 @@
     </div>
   </simple-modal>
 
-  <div class="caret-div"><span class="caret" style="float: right;  margin-right: 3%;" *ngIf="this.isButtonVisible" (click)="toggleDiv()"></span></div>
-  <div class="drop-menu" #dropMenu *ngIf="this.isButtonVisible" (click)="toggleDiv()">
+  <div (click)="toggleDiv()" class="caret-div"><span class="caret" style="float: right;  margin-right: 3%;" *ngIf="this.isButtonVisible" ></span></div>
+  <div class="drop-menu" #dropMenu *ngIf="this.isButtonVisible" >
             
     <ul class="drop-list" style="list-style-type:none;">
         <li class=""><form id="searchForm" (ngSubmit)="searchSessions(searchTerm)" class="navbar-form "  >
@@ -79,7 +79,7 @@
             </button>
           </form>
         </li>
-        
+        <div (click)="toggleDiv()">
             <li class="list-down">
               <a *ngIf="!auth.isAuthenticated()" [routerLink]="['user/login']">Login</a>
               <a *ngIf="auth.isAuthenticated()" [routerLink]="['user/profile']">Welcome {{auth.currentUser.firstName}}</a>
@@ -98,7 +98,7 @@
           </li>
         </ul>
       </li>
-      
+    </div>
     
    </ul>
   </div>
