@@ -6,7 +6,7 @@ import { IEvent } from './shared/index';
 @Component({
   template: `
   <div>
-    <h1>Upcoming Angular 2 Events</h1>
+    <h1>Upcoming Events</h1>
     <hr/>
     <div class="row">
       <div *ngFor="let event of events" class="col-md-5">
